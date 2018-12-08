@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CSSforReact.css" />
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.3/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script type="text/javascript" src="pkuangjia.js"></script>
+    <script type="text/javascript" src='getByClass.js'></script>
+    <script type="text/javascript" src="gray.js"></script>
+</head>
+<body>
+    <div id="index_HanSight"></div>
+    <script type="text/babel">
+        var MainPage=React.createClass({
+         render:function(){ return(
+        <div>
+            <img className='imgLabel' src={ 'img/label.png'} />
+            <a className='title' href="#"><span style={{fontWeight: 'bold'}}>Han</span><span>sight 翰思</span></a>
+            <ul >
+                <li>
+                    <p>产品</p>
+                </li>
+                <li>
+                    <p>方案</p>
+                </li>
+                <li>
+                    <p>Blog</p>
+                </li>
+                <li>
+                    <p style={{left:'10px'}}>招贤纳士</p>
+                </li>
+            </ul>
+            <input  className="btn1" type="button" value="演示请求" name=""/>
+        <img className="headbgp" src="img/headbg.png" alt=''/>
+        <img className="headbgp" src="img/headbg2.png" style={{height: '600px', left: '-400px'}} alt=''/>
+       <div className='text'>
+            <h1>让信息安全更 AI</h1>
+            <p>智能分析——让安全可见、可知、可控</p>
+            <p>
+                <input  type="button" value="了解更多" name=""/>
+            </p>
+        </div>
+        </div>
+        ) }, }); ReactDOM.render(
+        <MainPage/>,document.getElementById('index_HanSight'))
+    </script>
+    <div id='index_Enterprise'></div>
+    <script type="text/babel">
+    var MainPage=React.createClass({
+    	render:function(){
+    		return(
+    			<div>
+    	<img src="img/p2.png" className='imgtop' alt="imgtop"/>
+        <img src="img/p2.png" className='imgleft' alt="imgleft" />
+        <img src="img/p2.png" className='imgright' alt="imgright" />
+        <div className='text'>
+            <h1>HanSight Enterprise</h1>
+            <p>瀚思科技产品以大数据安全分析企业版HanSight Enterprise为核心</p>
+            <p>支持异构数据、快速响应、安全势态感知、安全管理、威胁资产、降低MTTD MTTR......</p>
+            <input  type="button" value="申请试用" name=""/>
+         </div>
+    			</div>
+    			)
+    	},
+    });
+    ReactDOM.render(<MainPage/>,document.getElementById('index_Enterprise'))
+    </script>
+
+    <div id="index_4blocks"></div>
+    <script type='text/babel'>
+    var timer=null;
+    var MainPage=React.createClass({
+    	getInitialState:function(){
+    		return{
+    			opacity:1.0,
+    			top:-800,
+    	}
+    	}, 
+  	HandleShow: function (a,b) {
+    		var z=this;		
+  	  return function(){
+  	  	clearInterval(timer)
+  	   timer = setInterval(function(){
+      var c = z.state[a];
+      var d=z.state[b];
+      var c1=false
+      var d1=false
+      var speed= parseFloat((0-c)/4)
+      var speedTop=parseInt((0-d)/4)
+      d+=speedTop;
+      c+=speed;
+      if(c<=0.01){
+      	c=0
+      	 c1=true
+      }
+      if(speedTop==0){
+      	d=0
+      	d1=true
+      	speedTop=0
+      }
+      if(d1&&c1){
+      	clearInterval(timer)	
+      }
+      var res={};
+      res[a]=c,res[b]=d;
+      z.setState(res);
+    }, 30);
+  };   
+  	},
+  	HandleHide: function (a,b) {
+     var z=this;
+  	  return function(){
+  	  	clearInterval(timer)
+  	  timer = setInterval( function(){
+      var c = z.state[a];
+      var d=z.state[b];
+      var c1=false
+      var d1=false
+      var speed= parseFloat((1-c)/4)
+      var speedTop=parseInt((-800-d)/4)
+      d+=speedTop;
+      c+=speed;
+      if(c>0.99){
+      	c=1
+      	 c1=true
+      }
+      if(speedTop==0){
+      	d=-800
+      	d1=true
+      }
+      if(d1&&c1){
+      	clearInterval(timer)
+      }
+      var res={};
+      res[a]=c,res[b]=d;
+      z.setState(res);
+    }, 30);
+  };   
+  	},
+ 
+
+    	render:function(){
+    		return(
+    	<div>
+    		<div className="p3Show" style={{left: '0px'}} ><img  className='p3ShowBg'src="img/p3bg1.png" alt="" /><img className="p3ShowSign" src="img/p3sign1.png" style={{width:"25%"}} alt=""/>
+            <p className="p3ShowTxt" style={{opacity:this.state.opacity1}} >合规需求</p>
+        </div>
+         <div  className="p3Hide" style={{left: '0px' }} ><img className="hideSign" src="img/p3sign1.png" style={{ width:"25%"}} alt=""/>
+            <p className="hideTxt">合规需求</p><span>合规需求详细说明合规需求详细说明合规需求详细说明合规需求详细说明合规需求详细说明合规需求详细说明合规需求详细说明合规需求详细说明</span>
+            <input type="button" className="p3HideBtn" value="合规需求" name=""/>
+         </div>
+
+         <div className="p3Show" style={{left: '476px'}} onMouseOver={this.HandleShow('opacity','top')} onMouseOut={this.HandleHide('opacity','top')} > <img className='p3ShowBg' src="img/p3bg2.png" alt=""/><img className="p3ShowSign" src="img/p3sign2.png" style={{opacity:this.state.opacity, width:"25%"}}alt=""/>
+            <p className="p3ShowTxt" style={{opacity:this.state.opacity}}>智慧城市</p>
+            </div>
+         <div  className="p3Hide" style={{left: "476px", top:this.state.top}} onMouseOver={this.HandleShow('opacity','top')} onMouseOut={this.HandleHide('opacity','top')}><img className="hideSign" src="img/p3sign2.png" style={{width:'25%'}} alt=""/>
+            <p className="hideTxt">智慧城市</p><span>智慧城市详细说明智慧城市详细说明智慧城市详细说明智慧城市详细说明智慧城市详细说明智慧城市详细说明智慧城市详细说明智慧城市详细说明</span>
+            <input type="button" className="p3HideBtn" value="智慧城市" name=""/> 
+         </div>
+
+        <div className="p3Show" style={{left: "952px"}}  ><img className='p3ShowBg' src="img/p3bg3.png" alt=""/><img className='p3ShowSign' src="img/p3sign3.png" style={{width:"25%"}} alt=""/>
+            <p className="p3ShowTxt" >内部威胁</p></div>
+        <div className="p3Hide" style={{left: "952px"}}  ><img className="hideSign" src="img/p3sign3.png" style={{width:'25%'}} alt=""/>
+            <p className="hideTxt">内部威胁</p><span>内部威胁详细说明内部威胁详细说明内部威胁详细说明内部威胁详细说明内部威胁详细说明内部威胁详细说明内部威胁详细说明内部威胁详细说明</span>
+            <input type="button" className="p3HideBtn" value="内部威胁" name=""/>
+         </div>
+
+         <div className="p3Show" style={{left: '1428'}}  > <img className='p3ShowBg' src="img/p3bg4.png" alt=""/><img className='p3ShowSign' src="img/p3sign4.png" style={{width:"25%"}} alt=""/>
+            <p className="p3ShowTxt">安全审计</p>
+         </div>
+         <div  className="p3Hide" style={{left: '1428'}}  ><img className="hideSign" src="img/p3sign4.png" style={{width:'25%'}} alt=""/>
+            <p className="hideTxt">安全审计</p><span>安全审计详细说明安全审计详细说明安全审计详细说明安全审计详细说明安全审计详细说明安全审计详细说明安全审计详细说明安全审计详细说明</span>
+            <input type="button" className="p3HideBtn" value="安全审计" name=""/>
+             </div>
+        
+        </div>
+    			)
+    	},
+    })
+    ReactDOM.render(<MainPage/>,document.getElementById('index_4blocks'))
+    </script>
+
+    <div id="index_Customers"></div>
+    <script type='text/babel'>
+   var MainPage=React.createClass({
+   	render:function(){
+   		return(<div>
+   			<h2>我们的客户</h2>
+        <div className="imgList">
+            <img src="img/r1c1.png"/>
+            <img src="img/r1c2.png"/>
+            <img src="img/r1c3.png"/>
+            <img src="img/r1c4.png"/>
+            <img src="img/r1c5.png"/>
+            <img src="img/r1c6.png"/>
+            <img src="img/r2c1.png"/>
+            <img src="img/r2c2.png"/>
+            <img src="img/r2c3.png"/>
+            <img src="img/r2c4.png"/>
+            <img src="img/r2c5.png"/>
+            <img src="img/r2c6.png"/>
+            <img src="img/r3c1.png"/>
+            <img src="img/r3c2.png"/>
+            <img src="img/r3c3.png"/>
+            <img src="img/r3c4.png"/>
+            <img src="img/r3c5.png"/>
+            <img src="img/r3c6.png"/>
+            <img src="img/r4c1.png"/>
+            <img src="img/r4c2.png"/>
+            <img src="img/r4c3.png"/>
+            <img src="img/r4c4.png"/>
+            <img src="img/r4c5.png"/>
+            <img src="img/r4c6.png"/>
+        </div>
+   		</div>)
+   	},
+   });
+   ReactDOM.render(<MainPage/>,document.getElementById('index_Customers'))
+    </script>
+
+    <div id="index_LearnMore"></div>
+    <script type='text/babel'>
+    var MainPage=React.createClass({
+    	render:function(){
+    		return(
+    			<div>
+    			<img src="img/p5bg.png" className="img"/>
+             <div className='text'>
+            <h1>使用HanSight Enterprise短时间内</h1>
+            <h1>"从网银交易日志中发现多个高危个人账户"</h1>
+            <div className='p5SmallFont'>
+                <p>瀚思大数据安全分析系统行为为我行提供了一种全新的业务安全解决方案。在威胁发生的早期 即能够提供及时且准确的预警，并能够刻画出受影响的账户的具体行为等信息，切实降低银行的业务风险
+                </p>
+                <p style={{textAlign: 'right'}}>一某国有银行信息安全负责人</p>
+            </div>
+            <input id="btnIL1" type="button" value="了解更多" style={{cursor: "pointer"}} name="" />
+        </div>
+    		</div>
+    		)
+    	},
+    });
+    ReactDOM.render(<MainPage/>,document.getElementById('index_LearnMore'))
+    </script>
+
+    <div id="index_News"></div>
+    <script type='text/babel'>
+    var MainPage=React.createClass({
+    	render:function(){
+    		return(<div>
+    			 <h1 style={{textAlign: 'center',paddingTop:' 50px'}}>最新消息</h1>
+        <div className="newsList">
+            <div className="p6_news">
+                <img src="img/p6img1.png" className='news_Img'/>
+                <h2>第一财经周刊访谈瀚思科技CEO高瀚昭：安全守门人</h2>
+                <p>2017年10月10日</p>
+                <p className="p1">作为国内第一家研发用户行为分析系统 (UBA) 的公司,瀚思科技主要针对内部威胁，通过对用户行为画像及对比异常行为来判断风险。</p>
+                <input type="button" value="阅读全文" name=""/>
+            </div>
+            <div className="p6_news">
+                <img src="img/p6img2.png" className='news_Img'/>
+                <h2>HanSight瀚思凭借大数据安全分析跻身网络安全全球五百强</h2>
+                <p>2017年3月2日</p>
+                <p className="p1">北京时间2017年3月2日（美国当地时间3月1日）美国网络安全市场研究公司Cybersecurity Ventures发布了2017年第一季度网络安全……</p>
+                <input type="button" value="阅读全文" name=""/>
+            </div>
+            <div className="p6_news">
+                <img src="img/p6img3.png" className='news_Img'/>
+                <h2>让金融反欺诈踏上正途,HanSight瀚思保驾护航黄金周</h2>
+                <p>2017年9月30日</p>
+                <p className="p1">每逢节假日暴涨的不仅仅是旅游业，还有各种金融诈骗事件。尽管国家已经有法律法规对黑产进行相关处罚，然而快速收益和高回报也让越……</p>
+                <input type="button" value="阅读全文" name=""/>
+            </div>
+    			</div>
+    			</div>
+    			)
+    	},
+    })
+    ReactDOM.render(<MainPage/>,document.getElementById('index_News'))
+    </script>
+
+    <div id="index_Try"></div>
+    <script type='text/babel'>
+    var MainPage=React.createClass({
+    	render:function(){
+    		return(<div>
+    			 <h1>体验更智能的安全</h1>
+        <h2>HanSight Enterprise —— 让安全可见、可知、可控</h2>
+        <input id='btnIT1' type="button" value="立刻使用" name=""/>
+    			</div>
+    			)
+    	},
+    });
+     ReactDOM.render(<MainPage/>,document.getElementById('index_Try'))
+    </script>
+    <div id="foot"></div>
+    <script type='text/babel'>
+    var MainPage=React.createClass({
+    	render:function(){
+    		return(<div>
+    			<ul className="final_LeftText">
+            <li>社交媒体</li>
+            <li>公司信息</li>
+            <li>合作伙伴</li>
+        </ul>
+        <img src="img/weChat.png"/>
+        <img src="img/weibo.png" style={{marginLeft: '70px'}}/>
+        <ul className="information">
+            <a href="#">
+                <li>公司简介</li>
+            </a>
+            <a href="#">
+                <li>创始团队</li>
+            </a>
+            <a href="#">
+                <li>荣誉</li>
+            </a>
+            <a href="#">
+                <li>投资方</li>
+            </a>
+            <a href="#">
+                <li>联系我们</li>
+            </a>
+            <a href="#">
+                <li>招贤纳士</li>
+            </a>
+            <a href="#">
+                <li>新闻</li>
+            </a>
+        </ul>
+        <ul className="information" style={{top: '250px'}}>
+            <li>公安三所</li>
+            <li>华为</li>
+            <li>亚信</li>
+            <li>百度安全</li>
+            <li>Csico</li>
+            <li>pxGrid</li>
+        </ul>
+    			</div>
+    			)
+    	},
+    })
+    ReactDOM.render(<MainPage/>,document.getElementById('foot'))
+    </script>
+</body>
+
+</html>

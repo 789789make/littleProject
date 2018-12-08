@@ -1,0 +1,90 @@
+*{
+	margin: 0px;
+	padding: 0;
+}
+p,h1,h2{font-family: PingFangSC-Medium;}
+a{cursor: pointer; color: white;}
+ul{list-style: none;}
+li{float: left;}
+
+
+
+
+#index_HanSight{width: 1903px;height:800px;background-image: linear-gradient(-180deg, #1C54C3 0%, #1CA0F4 100%);position: relative;}
+#index_HanSight .title{width: 10%; height: 50px; color: white;position: absolute; top: 20px;left: 10%; text-decoration: none;}
+#index_HanSight span{font-size: 170%}
+#index_HanSight .text{top: 150px; left: 35%; position: absolute; font-size:200%; color: white; text-align: center; line-height: 2;}
+#index_HanSight .text input{cursor: pointer; text-decoration: none; border: 2px solid white; color: white;width:200px;height: 50px; background: none; font-size: 15px; }
+#index_HanSight ul{color: white; position: absolute;top: 0px; left: 730px;list-style: none; text-align: center; height: 100px; }
+#index_HanSight ul li{font-size: 130%; cursor: pointer; display: block;height: 100px; width: 100px;position: relative;}
+#index_HanSight ul li:hover,#index_HanSight .btn1:hover,#index_HanSight .text input:hover{background: white;color:#54C2F0;}
+#index_HanSight ul li p{position: absolute;top: 30px; left: 25px;}
+#index_HanSight .btn1{position: absolute;right: 10%; background: none;top: 20px; width: 100px;height: 50px;font:1.5em;color: white;border: 2px solid white; cursor: pointer;font-size: 15px;}
+#index_HanSight .headbgp{ position: absolute;bottom: 0px;  width: 100%;height: 420px;}
+#index_HanSight .imgLabel{width: 50px;height: 50px; position: absolute;left: 7%; top: 20px;}
+
+
+#index_Enterprise{width:1903px;height:800px;background-image: linear-gradient(89deg, #FFFFFF 0%, #DDECF2 100%); position: relative;}
+#index_Enterprise img{position: absolute;}
+#index_Enterprise .imgtop{top: 0px;right: 300px;}
+#index_Enterprise .imgright{bottom: 100px;right: 150px;}
+#index_Enterprise .imgleft{left: 700px;  bottom:100px;}
+#index_Enterprise .text{position: absolute; top: 200px;left: 300px; width: 500px;height: 400px;line-height:2;}
+#index_Enterprise .text h1{font-family: PingFangSC-Semibold;font-size: 40px;color: #4A4A4A;}
+#index_Enterprise .text p{font-family: PingFangSC-Light;font-size: 20px;color: #4A4A4A; opacity: 80;filter: alpha(opacity:0.8);}
+#index_Enterprise input{background:white;width: 130px;height: 50px;margin:50px 0 0 50px;border:1px solid #54C2F0; color:#54C2F0;cursor: pointer;}
+#index_Enterprise input:hover{background:#54C2F0;color: white; }
+#index_HanSight .active{font-size: 130%; cursor: pointer; display: block;height: 100px; width: 100px;color:#1C54C3;background:white; }
+
+#index_4blocks{width: 1903px;height:800px;background: #4A4A4A;position: relative; text-align: center;overflow: hidden;}
+#index_4blocks div{width: 476px;height: 800px;position: absolute;}
+#index_4blocks .p3Hide{top: -800px;background:rgba(54,194,240,0.8);position: absolute;}
+#index_4blocks .p3ShowSign{ left: 188px; top: 300px;position: absolute;} 
+#index_4blocks .p3ShowBg{filter:grayscale(90%); width:476px; height:800px; display: block;position: absolute; }
+#index_4blocks .p3ShowTxt{ left: 180px;bottom: 250px; font-size: 200%;color: white;position: absolute;}
+#index_4blocks .hideSign{  left: 188px; top: 100px;position: absolute;}
+#index_4blocks .hideTxt{ left: 180px;bottom: 500px; font-size: 200%;color: white;position: absolute;}
+#index_4blocks .p3Hide span{bottom: 250px;left: 50px;right: 50px;font-size: 25px;color:white;position: absolute;}
+#index_4blocks .p3HideBtn{bottom: 100px;left: 150px; width: 175px ; height:50px; border: 1px solid white; color: white;background: none;cursor: pointer;font-size: 20px;position: absolute;}
+#index_4blocks .p3HideBtn:hover{color:#54C2F0;border:none;background: white;}
+
+#index_Customers{width: 1903px;height:800px;background: #FAFAFA; position: relative;}
+#index_Customers h2{text-align: center;color: #4A4A4A;font-size: 40px;padding: 50px;}
+#index_Customers .imgList{ margin:10px 90px 0 90px; height: 600px;}
+#index_Customers img{margin:30px 40px;  background: white; width: 200px;height: 70px;}
+
+#index_LearnMore{width: 1903px;height:800px;background-image: linear-gradient(-180deg, #1C5BC3 0%, #43B9EB 100%);position: relative;overflow: hidden;}
+#index_LearnMore .img{position: absolute; bottom: 0px; width: 1903px;height: 500px;z-index: 0; background-color: transparent;}
+#index_LearnMore .text{width: 800px;height: 600px;position: absolute;top:170px;left: 300px; color: white;}
+#index_LearnMore .text h1{font-weight:normal;margin-left: 100px; font-size: 220%;}
+#index_LearnMore .p5SmallFont{margin-top: 50px;border-left: 2px solid #52C3F1;}
+#index_LearnMore .p5SmallFont p{margin-left: 100px; font-size: 110%; font-weight: lighter;line-height: 2;}
+#index_LearnMore  input{ width:130px;height:40px;background: white; color: #54C2F0;font-size: 100%;margin-left: 100px;margin-top: 30px;border: none;}
+#index_LearnMore  input:hover{background:#54C2F0;color: white;border:1px solid #54C2F0;}
+
+
+
+#index_News{width: 1903px;height:800px;background: #FAFAFA;}
+#index_News .newsList{width:1600px; margin-left: 150px; height: 600px;margin-top: 50px;}
+#index_News .newsList .p6_news{width: 400px;height: 500px;margin-left:100px; float: left; border: 1px solid #D3D3D3; position: relative;}
+#index_News .newsList .p6_news .news_Img{width: 400px;height: 200px;margin-top: 0px; background-size:cover;}
+#index_News .newsList .p6_news h2{margin-top: 30px; margin-left: 25px; color: #4A4A4A;line-height: 1.5;}
+#index_News .newsList .p6_news p{font-size: 12px;margin-top: 10px;margin-left: 25px;color: #9B9B9B;}
+#index_News .p1{font-size:15px; margin-top: 10px;margin-left:25px;color: #4A4A4A ;margin-right: 20px; }
+#index_News .newsList input{color: #54C2F0;left:140px; bottom:35px; border: 1px solid #54C2F0; position: absolute;width: 120px;height: 40px; text-align: center;background: none; cursor: pointer;}
+#index_News .newsList input:hover{background:#54C2F0;color: white;border:1px solid #54C2F0;}
+
+
+#index_Try{width: 1903px;height: 500px;background-image: linear-gradient(-90deg, #7CDBF7 0%, #43B9EB 100%);color: white;text-align: center;}
+#index_Try h1{text-align: center; font-size: 300%;padding-top: 100px;letter-spacing: 10px;}
+#index_Try h2{font-size: 200%;font-weight: 1;padding-top: 50px;}
+#index_Try input{font-size: 100%;margin-top: 50px; width: 150px;height: 50px;color: #52C3F1;border:none;background: white;cursor: pointer;}
+#index_Try input:hover{background:#54C2F0;color: white;border:1px solid white;}
+
+#foot{width: 1903px;height: 400px;background: #555555; position: relative;}
+#foot .final_LeftText{padding: 50px 200px; width:100px;font-size: 18px;list-style: none;color: #C0C0C0;}
+#foot .final_LeftText li{margin-top: 50px;}
+#foot img{margin-left: 200px; position: absolute;top: 80px;cursor: pointer;}
+#foot .information{color:white; position: absolute;left: 320px;top: 175px;}
+#foot .information li{margin-left: 20px; cursor: pointer;}
+#foot .information li:hover{color:#54C2F0; text-decoration: underline;}
