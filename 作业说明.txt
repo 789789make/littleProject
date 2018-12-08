@@ -1,0 +1,3 @@
+       此次作业分为两个文件夹：IndexByReact和IndexByJs，其中，IndexByReact文件夹中的html静态网页采用了当前流行的前端框架React制作。IndexByJs采用了原生的html(5)+css(3)+javascript框架制作。
+IndexByJS中还包含了一些根据自己的理解，给其中的某些元素和组件绑定了事件实现了运动效果，增加页面和用户间的的交互性。
+       
